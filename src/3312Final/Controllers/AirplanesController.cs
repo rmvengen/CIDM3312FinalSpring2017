@@ -20,6 +20,11 @@ namespace _3312Final.Controllers
             return x + y;
         }
 
+        private int Subtract(int x, int y)
+        {
+            return x - y;
+        }
+
         public AirplanesController(ApplicationDbContext context)
         {
             _context = context;    
