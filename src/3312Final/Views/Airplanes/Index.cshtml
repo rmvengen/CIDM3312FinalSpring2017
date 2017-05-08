@@ -1,0 +1,107 @@
+@model IEnumerable<_3312Final.Models.Airplane>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pilot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Altitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FlapSetting)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FlapSettingLand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OutsideAirTemp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RunwayDirection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Snow)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TripDistance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindDirection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindSpeed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Headwind)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pilot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Altitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlapSetting)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlapSettingLand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OutsideAirTemp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RunwayDirection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Snow)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TripDistance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WindDirection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WindSpeed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Headwind)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
