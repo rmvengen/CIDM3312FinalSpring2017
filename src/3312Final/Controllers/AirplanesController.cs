@@ -14,6 +14,12 @@ namespace _3312Final.Controllers
     {
         private readonly ApplicationDbContext _context;
 
+        //added private int add
+        private int Add(int x, int y)
+        {
+            return x + y;
+        }
+
         public AirplanesController(ApplicationDbContext context)
         {
             _context = context;    
